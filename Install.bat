@@ -41,10 +41,10 @@ if exist %minecraftPath%shaderpacks\ (
 echo.
 call :colorEcho 06 "Copying mods."
 echo.
-xcopy /e /i "%sourcePath%mods" "%minecraftPath%mods" /Q > nul
+robocopy "%sourcePath%mods" "%minecraftPath%mods" /E /LOG:nul
 call :colorEcho 06 "Copying shaders."
 echo.
-xcopy /e /i "%sourcePath%shaderpacks" "%minecraftPath%shaderpacks" /Q > nul
+robocopy "%sourcePath%shaderpacks" "%minecraftPath%shaderpacks" /E /LOG:nul
 echo.
 echo.
 call :colorEcho 0a "All done."
